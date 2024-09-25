@@ -36,9 +36,16 @@ public class Main {
     }
 
     public static void printAllData(ArrayList<Task> tasksData) {
+        System.out.println("Printing data with iteration");
         for (Task t : tasksData) {
             System.out.println(t);
         }
+    }
+
+    public static void printDataWithStreams(ArrayList<Task> tasks ) {
+        System.out.println("Printing data with streams");
+        tasks.stream()                          // create a stream
+                .forEach(System.out::println);  // terminal operator
     }
 
     public static void printDeadlines(ArrayList<Task> tasksData) {
